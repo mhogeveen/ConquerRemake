@@ -10,6 +10,33 @@ html {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
+.green {
+  color: $green;
+}
+
+.blue {
+  color: $blue;
+}
+
+.red {
+  color: $red;
+}
+
+.light-gray {
+  color: $light-gray;
+}
+
+.centered {
+  align-self: center;
+}
+
+// Links for nav
+
+#section1 {
+  position: relative;
+  top: -$height-offset;
+}
+
 // Styles applied to navigation-section
 
 #navigation-section {
@@ -44,7 +71,6 @@ html {
 }
 
 // Styles applied to banner-section
-
 #banner-section {
   @include flex-box(center, center, column, flex);
   background-image: url(../images/bg-1.jpg);
@@ -66,6 +92,59 @@ html {
       font-size: 1.6rem;
       text-shadow: 1px 1px #333333;
       margin: 0.5rem 0 1rem 0;
+    }
+  }
+}
+
+// Styles applied to about-section
+#about-section {
+  @include flex-box(flex-start, center, column, flex);
+  width: 100%;
+  margin: 4rem 0 0 0;
+
+  .row {
+    @include flex-box(flex-start, stretch, row, flex);
+    width: 90%;
+    margin: 0 0 4rem 0;
+
+    .container {
+      @include flex-box(flex-start, stretch, column, flex);
+      margin: 1rem;
+      background-color: $about-background;
+
+      .container-1of3 {
+        width: 33.33%;
+      }
+
+      .container-1of2 {
+        width: 50%;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .tekst {
+        @include flex-box(flex-start, stretch, column, flex);
+        margin: 1rem;
+
+        h1 {
+          font-size: 1.25rem;
+          font-weight: 700;
+        }
+
+        p {
+          margin: 1rem 0;
+          line-height: 1.6;
+          font-size: 0.9rem;
+          color: $gray;
+        }
+
+        a {
+          align-self: center;
+        }
+      }
     }
   }
 }
