@@ -10,26 +10,6 @@ html {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-.green {
-  color: $green;
-}
-
-.blue {
-  color: $blue;
-}
-
-.red {
-  color: $red;
-}
-
-.light-gray {
-  color: $light-gray;
-}
-
-.centered {
-  align-self: center;
-}
-
 // Links for nav
 
 #section1 {
@@ -125,6 +105,64 @@ html {
         height: auto;
       }
 
+      .green {
+        h1 {
+          color: $green;
+        }
+        a {
+          color: $white;
+          background-color: $green;
+          transition: background-color 300ms ease;
+          &:hover {
+            background-color: $green-hover;
+          }
+        }
+      }
+
+      .blue {
+        h1 {
+          color: $blue;
+        }
+        a {
+          color: $white;
+          background-color: $blue;
+          transition: background-color 300ms ease;
+          &:hover {
+            background-color: $blue-hover;
+          }
+        }
+      }
+
+      .red {
+        h1 {
+          color: $red;
+        }
+        a {
+          color: $white;
+          background-color: $red;
+          transition: background-color 300ms ease;
+          &:hover {
+            background-color: $red-hover;
+          }
+        }
+      }
+
+      .light-gray {
+        h1 {
+          color: $light-gray;
+          align-self: center;
+        }
+        a {
+          color: $light-gray;
+          background-color: $white;
+          border: 1px solid $lightest-gray;
+          transition: background-color 300ms ease;
+          &:hover {
+            background-color: #e6e6e6;
+          }
+        }
+      }
+
       .tekst {
         @include flex-box(flex-start, stretch, column, flex);
         margin: 1rem;
@@ -143,6 +181,9 @@ html {
 
         a {
           align-self: center;
+          text-decoration: none;
+          padding: 1rem 2rem;
+          border-radius: 5px;
         }
       }
     }
