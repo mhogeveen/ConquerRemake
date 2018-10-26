@@ -1,0 +1,71 @@
+// Import the helper files
+@import "helper/mixins";
+@import "helper/placeholders";
+@import "helper/variables";
+
+// Syles applied to whole document
+
+html {
+  font-size: 16px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+// Styles applied to navigation-section
+
+#navigation-section {
+  @include flex-box(center, center, row, flex);
+  position: fixed;
+  width: 100%;
+  height: $height-offset;
+  background-color: $header-background;
+
+  nav {
+    @include flex-box(center, center, row, flex);
+    width: 100%;
+    ul {
+      @include flex-box(center, center, row, flex);
+      width: 100%;
+
+      a {
+        padding: 1rem 1.5rem;
+        margin: 0 0.75rem;
+        border: $header-button-border;
+        text-decoration: none;
+        color: $white;
+        font-size: 1.25rem;
+        transition: background-color 100ms linear;
+
+        &:hover {
+          background-color: $button-hover;
+        }
+      }
+    }
+  }
+}
+
+// Styles applied to banner-section
+
+#banner-section {
+  @include flex-box(center, center, column, flex);
+  background-image: url(../images/bg-1.jpg);
+  background-size: cover;
+
+  .tekst {
+    @include flex-box(center, center, column, flex);
+    padding: 15rem 0;
+
+    h1 {
+      color: $white;
+      font-size: 4.5rem;
+      text-shadow: 2px 2px $black;
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    h4 {
+      color: $white;
+      font-size: 1.6rem;
+      text-shadow: 1px 1px #333333;
+      margin: 0.5rem 0 1rem 0;
+    }
+  }
+}

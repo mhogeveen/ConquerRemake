@@ -1,0 +1,61 @@
+html {
+  font-size: 16px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
+
+#navigation-section {
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 5rem;
+  background-color: #383e4c; }
+  #navigation-section nav {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    width: 100%; }
+    #navigation-section nav ul {
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      display: flex;
+      width: 100%; }
+      #navigation-section nav ul a {
+        padding: 1rem 1.5rem;
+        margin: 0 0.75rem;
+        border: 1px solid #646d7c;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.25rem;
+        transition: background-color 100ms linear; }
+        #navigation-section nav ul a:hover {
+          background-color: #49505f; }
+
+#banner-section {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  background-image: url(../images/bg-1.jpg);
+  background-size: cover; }
+  #banner-section .tekst {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    padding: 15rem 0; }
+    #banner-section .tekst h1 {
+      color: #ffffff;
+      font-size: 4.5rem;
+      text-shadow: 2px 2px #000000;
+      margin: 1rem 0 0.5rem 0; }
+    #banner-section .tekst h4 {
+      color: #ffffff;
+      font-size: 1.6rem;
+      text-shadow: 1px 1px #333333;
+      margin: 0.5rem 0 1rem 0; }
+
+/*# sourceMappingURL=main.css.map */
