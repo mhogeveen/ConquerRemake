@@ -98,6 +98,13 @@ html {
         transition: background-color 300ms ease; }
         #about-section .row .container .green a:hover {
           background-color: #449d44; }
+      #about-section .row .container .blue .link {
+        color: #337ab7;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0);
+        transition: none; }
+        #about-section .row .container .blue .link:hover {
+          background-color: rgba(0, 0, 0, 0); }
       #about-section .row .container .blue h1 {
         color: #1686c1; }
       #about-section .row .container .blue a {
