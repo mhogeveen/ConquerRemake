@@ -14,7 +14,7 @@ html {
 
 // Links for nav
 
-#section1, #section2 {
+#section1, #section2, #section3 {
   position: relative;
   top: -$height-offset;
 }
@@ -201,7 +201,7 @@ html {
   }
 }
 
-// Styles applied to services section1
+// Styles applied to services section
 
 #services-section {
   @include flex-box(flex-start, center, column, flex);
@@ -234,10 +234,20 @@ html {
   .row {
     @include flex-box(flex-start, stretch, row, flex);
     width: 90%;
-    margin: 0 0 4rem 0;
 
     .container-1of4 {
       width: 25%;
+
+      h1 {
+        align-self: center;
+      }
+      a {
+        align-self: center;
+      }
+    }
+
+    .container-1of1 {
+      width: 100%;
     }
 
     .container {
@@ -255,7 +265,6 @@ html {
   .light-gray {
     h1 {
       color: $light-gray;
-      align-self: center;
     }
     a {
       color: $light-gray;
@@ -269,7 +278,7 @@ html {
   }
 
   .tekst {
-    @include flex-box(flex-start, stretch, column, flex);
+    @include flex-box(flex-start, flex-start, column, flex);
     margin: 1rem;
 
     h1 {
@@ -285,10 +294,91 @@ html {
     }
 
     a {
-      align-self: center;
       text-decoration: none;
       padding: 1rem 2rem;
       border-radius: 5px;
+    }
+  }
+}
+
+// Styles applied to contact section1
+
+#contact-section {
+  @include flex-box(center, center, column, flex);
+  width: 100%;
+  height: 30rem;
+  background-image: url(../images/bg-3.jpg);
+
+  .row {
+    @include flex-box(center, stretch, row, flex);
+    width: 770px;
+
+    h1 {
+      color: $white;
+      font-size: 2.25rem;
+      text-shadow: 2px 2px #333333;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      line-height: 1.6;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 5px;
+      padding: 2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    form {
+      @include flex-box(flex-start, stretch, row, flex);
+      width: 100%;
+
+      .column {
+        @include flex-box(flex-start, stretch, column, flex);
+        width: 50%;
+
+        ::placeholder {
+          color: $black;
+          opacity: 1;
+        }
+
+        .form-input {
+          padding: 0.5rem;
+          margin: 0.4rem 0.4rem 0.4rem 0;
+          background-color: rgba(255, 255, 255, 0.4);
+          border-radius: 5px;
+          outline: none;
+          border: none;
+        }
+
+        .form-message {
+          padding: 0.5rem 0 1.8rem 0.5rem;
+          margin: 0.4rem 0 0.4rem 0.4rem;
+          background-color: rgba(255, 255, 255, 0.4);
+          border-radius: 5px;
+          outline: none;
+          border: none;
+          font-family: 'Open Sans';
+          font-size: 0.9rem;
+        }
+
+        .form-submit {
+          padding: 0.5rem;
+          margin: 0.4rem 0 0.4rem 0.4rem;
+          background-color: $gray;
+          border-radius: 5px;
+          outline: none;
+          border: none;
+          color: $white;
+          cursor: pointer;
+          transition: background-color 300ms ease, color 300ms ease;
+
+          &:hover {
+            background-color: $white;
+            color: $gray;
+          }
+        }
+      }
     }
   }
 }
