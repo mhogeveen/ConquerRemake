@@ -1,3 +1,5 @@
+// Colors
+
 $white: #ffffff;
 $black: #000000;
 $gray: #333333;
@@ -16,6 +18,15 @@ $button-border: #646d7c;
 $button-hover: #49505f;
 $about-background: #f2f2f2;
 
+// Borders
+
 $standard-border: 1px solid black;
 $header-button-border: 1px solid $button-border;
+
+// Height offset
+
 $height-offset: 5rem;
+
+// Breakpoints
+
+$breakpoint1: 800px;
