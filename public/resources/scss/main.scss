@@ -28,6 +28,10 @@ html {
   height: $height-offset;
   background-color: $header-background;
 
+  @media screen and (max-width: $breakpoint3) {
+    display: none;
+  }
+
   nav {
     @include flex-box(center, center, row, flex);
     width: 100%;
@@ -47,6 +51,52 @@ html {
         &:hover {
           background-color: $button-hover;
         }
+      }
+    }
+  }
+}
+
+// Styles applied to navigation-dropdown
+
+#navigation-dropdown {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+
+  @media screen and (max-width: $breakpoint3) {
+    display: block;
+  }
+
+  .dropdown {
+    cursor: pointer;
+
+    &:hover .dropdown-content {
+      display: inline-block;
+    }
+
+    i {
+      background-color: $gray;
+      color: $white;
+      border-radius: 3px;
+      padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 105%;
+      z-index: 10;
+      background-color: $gray;
+      padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+      border-radius: 3px;
+      min-width: 10rem;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        margin: 1rem;
       }
     }
   }
@@ -482,10 +532,14 @@ html {
 
 // Styles applied to to-top Button
 
-i {
-  color: $gray;
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  cursor: pointer;
+.to-top {
+  a {
+    i {
+      color: $gray;
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      cursor: pointer;
+    }
+  }
 }

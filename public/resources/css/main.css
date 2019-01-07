@@ -16,6 +16,9 @@ html {
   width: 100%;
   height: 5rem;
   background-color: #383e4c; }
+  @media screen and (max-width: 800px) {
+    #navigation-section {
+      display: none; } }
   #navigation-section nav {
     justify-content: center;
     align-items: center;
@@ -38,6 +41,38 @@ html {
         transition: background-color 100ms linear; }
         #navigation-section nav ul a:hover {
           background-color: #49505f; }
+
+#navigation-dropdown {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem; }
+  @media screen and (max-width: 800px) {
+    #navigation-dropdown {
+      display: block; } }
+  #navigation-dropdown .dropdown {
+    cursor: pointer; }
+    #navigation-dropdown .dropdown:hover .dropdown-content {
+      display: inline-block; }
+    #navigation-dropdown .dropdown i {
+      background-color: #333333;
+      color: #ffffff;
+      border-radius: 3px;
+      padding: 0.3rem 0.7rem 0.3rem 0.7rem; }
+    #navigation-dropdown .dropdown .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 105%;
+      z-index: 10;
+      background-color: #333333;
+      padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+      border-radius: 3px;
+      min-width: 10rem; }
+      #navigation-dropdown .dropdown .dropdown-content a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 1rem; }
 
 #banner-section {
   justify-content: center;
@@ -291,13 +326,13 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 800px) {
     #contact-section {
       height: 50rem; } }
   @media screen and (max-width: 765px) {
     #contact-section {
       margin: 4rem 0 5rem 0; } }
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 800px) {
     #contact-section {
       height: 40rem; } }
   #contact-section .row {
@@ -306,7 +341,7 @@ html {
     flex-direction: row;
     display: flex;
     width: 770px; }
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 800px) {
       #contact-section .row {
         width: 95%; } }
     #contact-section .row h1 {
@@ -327,7 +362,7 @@ html {
       flex-direction: row;
       display: flex;
       width: 100%; }
-      @media screen and (max-width: 780px) {
+      @media screen and (max-width: 800px) {
         #contact-section .row form {
           flex-wrap: wrap; } }
       #contact-section .row form .column {
@@ -336,7 +371,7 @@ html {
         flex-direction: column;
         display: flex;
         width: 50%; }
-        @media screen and (max-width: 780px) {
+        @media screen and (max-width: 800px) {
           #contact-section .row form .column {
             width: 100%; } }
         #contact-section .row form .column ::placeholder {
@@ -349,7 +384,7 @@ html {
           border-radius: 5px;
           outline: none;
           border: none; }
-          @media screen and (max-width: 780px) {
+          @media screen and (max-width: 800px) {
             #contact-section .row form .column .form-input {
               margin: 0.4rem 0rem 0.4rem 0; } }
         #contact-section .row form .column .form-message {
@@ -361,7 +396,7 @@ html {
           border: none;
           font-family: 'Open Sans';
           font-size: 0.9rem; }
-          @media screen and (max-width: 780px) {
+          @media screen and (max-width: 800px) {
             #contact-section .row form .column .form-message {
               margin: 0.4rem 0rem 0.4rem 0; } }
         #contact-section .row form .column .form-submit {
@@ -377,11 +412,11 @@ html {
           #contact-section .row form .column .form-submit:hover {
             background-color: #ffffff;
             color: #333333; }
-          @media screen and (max-width: 780px) {
+          @media screen and (max-width: 800px) {
             #contact-section .row form .column .form-submit {
               margin: 0.4rem 0rem 0.4rem 0; } }
 
-i {
+.to-top a i {
   color: #333333;
   position: fixed;
   bottom: 1rem;
