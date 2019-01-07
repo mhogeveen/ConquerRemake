@@ -1,6 +1,7 @@
 html {
   font-size: 16px;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth; }
 
 #section1, #section2, #section3, #section4 {
   position: relative;
