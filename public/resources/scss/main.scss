@@ -139,6 +139,7 @@ html {
 #about-section {
   @include flex-box(flex-start, center, column, flex);
   width: 100%;
+
   margin: 4rem 0 0 0;
 
   @media screen and (max-width: $breakpoint4) {
@@ -148,6 +149,7 @@ html {
   .row {
     @include flex-box(flex-start, stretch, row, flex);
     width: 95%;
+    max-width: 1400px;
     margin: 0 0 4rem 0;
 
     @media screen and (max-width: $breakpoint1) {
@@ -317,6 +319,7 @@ html {
   .row {
     @include flex-box(flex-start, stretch, row, flex);
     width: 95%;
+    max-width: 1400px;
     margin: 0 0 4rem 0;
 
     @media screen and (max-width: $breakpoint1) {
@@ -537,8 +540,8 @@ html {
     i {
       color: $gray;
       position: fixed;
-      bottom: 1rem;
-      right: 1rem;
+      bottom: 0.25rem;
+      right: 0.25rem;
       cursor: pointer;
     }
   }
